@@ -8,6 +8,7 @@ git_custom_status() {
   local cb=$(current_branch)
   if [ -n "$cb" ]; then
     echo "%{$fg_bold[white]%}%M $(parse_git_dirty)%{$fg_bold[yellow]%}$(work_in_progress)%{$reset_color%}$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  else echo "%{$fg_bold[white]%}%M%{$reset_color%}"  
   fi
 }
 
