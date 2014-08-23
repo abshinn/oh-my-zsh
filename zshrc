@@ -53,29 +53,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/opt/ruby/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # TOKENS
-export HOMEBREW_GITHUB_API_TOKEN=33a41fac85e4853bf245939f3a96e81c157b7180
-export BART_API_KEY=TVKZ-JUDR-UTYY-VMGK
+source ~/.KEYS.sh
 
 # ALIASING
 alias ll="ls -lh"
