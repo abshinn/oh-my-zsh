@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -55,36 +55,40 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/opt/ruby/bin"
 
+export EDITOR="vim"
+
 # TOKENS
 source ~/.KEYS.sh
 
-# ALIASING
+# Dir Traversing
 alias ll="ls -lh"
 alias ..="cd .. && ll"
 alias ~="cd ~ && ll"
 alias vi="vim"
 
+# GIT
 alias commit="git commit -m"
 alias status="git status"
 alias add="git add"
+alias remote="git remote"
 
-alias chrome="open -a /Applications/Google\ Chrome.app"
+# Custom Scripts
 alias bart="~/bart/./bart.py"
 alias weather="~/weather/./weather.py"
-alias server="python -m SimpleHTTPServer 8888 &"
-alias apps="osascript ~/apple/applications.scrpt"
-alias openport="ssh -N -L localhost:7777:localhost:7777"
-alias openports="lsof -i -P | grep -i 'listen'"
+alias spot="~/spot/./SpotifyControl.scrpt"
 alias pyspark="~/spark/usb/spark/bin/pyspark"
 
-#export TERM=xterm-256color
-export EDITOR="vim"
+# Application Scripts
+alias chrome="open -a /Applications/Google\ Chrome.app"
+alias apps="osascript ~/apple/applications.scrpt"
+
+# Ports
+alias server="python -m SimpleHTTPServer 8888 &"
+alias openport="ssh -N -L localhost:7777:localhost:7777"
+alias openports="lsof -i -P | grep -i 'listen'"
 
 # topojson
 export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
-
-# llvm
-#export LLVM_CONFIG_PATH="/path/to/llvm-config"
 
 # System Temperature
 alias systemp="/Applications/TemperatureMonitor.app/Contents/MacOS/tempmonitor -c -l -a"
