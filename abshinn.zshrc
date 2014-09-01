@@ -73,10 +73,11 @@ alias add="git add"
 alias remote="git remote"
 
 # Custom Scripts
-alias bart="~/bart/./bart.py"
-alias weather="~/weather/./weather.py"
-alias spot="~/spot/./SpotifyControl.scrpt"
+alias bart="~/bart/bart.py"
+alias weather="~/weather/weather.py"
+alias spot="~/spot/SpotifyControl.scrpt"
 alias pyspark="~/spark/usb/spark/bin/pyspark"
+alias quakes="~/usgs/code/quakes.sh"
 
 # Application Scripts
 alias chrome="open -a /Applications/Google\ Chrome.app"
@@ -86,6 +87,10 @@ alias apps="osascript ~/apple/applications.scrpt"
 alias server="python -m SimpleHTTPServer 8888 &"
 alias openport="ssh -N -L localhost:7777:localhost:7777"
 alias openports="lsof -i -P | grep -i 'listen'"
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # topojson
 export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
