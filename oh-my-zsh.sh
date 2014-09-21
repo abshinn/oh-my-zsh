@@ -1,13 +1,8 @@
 # Check for updates on initial load...
-<<<<<<< HEAD
-#if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
-#  /usr/bin/env ZSH=$ZSH DISABLE_UPDATE_PROMPT=$DISABLE_UPDATE_PROMPT zsh -f $ZSH/tools/check_for_upgrade.sh
-#fi
-=======
-if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
-  env ZSH=$ZSH DISABLE_UPDATE_PROMPT=$DISABLE_UPDATE_PROMPT zsh -f $ZSH/tools/check_for_upgrade.sh
-fi
->>>>>>> 96e4e5dd032d2df75f87d5b3e5594d527c655b16
+
+# if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
+#   env ZSH=$ZSH DISABLE_UPDATE_PROMPT=$DISABLE_UPDATE_PROMPT zsh -f $ZSH/tools/check_for_upgrade.sh
+# fi
 
 # Initializes Oh My Zsh
 
