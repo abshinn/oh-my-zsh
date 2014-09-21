@@ -65,6 +65,7 @@ alias ll="ls -lh"
 alias ..="cd .. && ll"
 alias ~="cd ~ && ll"
 alias vi="vim"
+alias woman="man"
 
 # GIT
 alias commit="git commit -m"
