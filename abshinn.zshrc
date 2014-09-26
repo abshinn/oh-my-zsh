@@ -97,7 +97,7 @@ export PATH=$PATH:$GOPATH/bin
 export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
 
 # System Temperature
-alias systemp="/Applications/TemperatureMonitor.app/Contents/MacOS/tempmonitor -c -l -a"
+alias systemp="/Applications/TemperatureMonitor.app/Contents/MacOS/tempmonitor -l -a"
 
 # Hello, Dave
 echo Hello, Dave
