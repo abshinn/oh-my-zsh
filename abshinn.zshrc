@@ -88,6 +88,7 @@ alias apps="osascript ~/apple/applications.scrpt"
 alias server="python -m SimpleHTTPServer 8888 &"
 alias openport="ssh -N -L localhost:7777:localhost:7777"
 alias openports="lsof -i -P | grep -i 'listen'"
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # Go
 export GOPATH=$HOME/go
@@ -98,6 +99,31 @@ export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
 
 # System Temperature
 alias systemp="/Applications/TemperatureMonitor.app/Contents/MacOS/tempmonitor -l -a"
+
+# set where virutal environments will live
+export WORKON_HOME=$HOME/.virtualenvs
+# Replace with your own project home
+export PROJECT_HOME=$HOME/kwh
+# ensure all new environments are isolated from the site-packages directory
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+# use the same directory for virtualenvs as virtualenvwrapper
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# makes pip detect an active virtualenv and install to it
+export PIP_RESPECT_VIRTUALENV=true
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
+
+# geos for basemap
+export GOES_DIR=/usr/local/Cellar/geos/3.5.0/
+
+# postgres and pager
+export PGDATA=/usr/local/var/postgres
+export PAGER='less -S -F'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Hello, Dave
 echo Hello, Dave
