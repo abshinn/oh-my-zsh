@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew python pip vundle)
+plugins=(git brew python pip vundle django virtualenvwrapper colored-man-pages tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,7 +123,41 @@ export GOES_DIR=/usr/local/Cellar/geos/3.5.0/
 export PGDATA=/usr/local/var/postgres
 export PAGER='less -S -F'
 
+# test shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+alias ZR=ZshRehash
+alias ZL='vim ~/.zshlocal ; ZR'
+alias ZshInstall='~/.dotfiles/install.sh ; ZR'
+alias ZshRehash='. ~/.zshrc'
+alias bc='bc -l'
+alias df='df -H'
+alias dls='dpkg -L'
+alias dsl='dpkg -l | grep -i'
+alias f='fg'
+alias gl='git quicklog -n 20'
+alias gll='git quicklog-long'
+alias gpgdecrypt='gpg --decrypt-files'
+alias gpgencrypt='gpg --default-recipient-self --armor --encrypt-files'
+alias gsm='git submodule'
+alias gsmu='git submodule update --init --recursive'
+alias gup='git up'
+alias gus='git unstage'
+alias k='tree'
+alias l="ls -lh"
+alias ll="l -a"
+alias lt='ls -lt'
+alias ltr='ls -ltr'
+alias ltrh='ls -ltrh'
+alias nerdcrap='cat /dev/urandom | xxd | grep --color=never --line-buffered "be ef"'
+alias netwhat='lsof -i +c 40'
+alias slurp='wget -t 5 -c -nH -r -k -p -N --no-parent'
+alias tt='tail -n 9999'
+alias wgetdir='wget -r -l1 -P035 -nd --no-parent'
+alias whois='whois -h geektools.com'
 
 # Hello, Dave
 echo Hello, Dave
+
+# Don't end with errors.
+true
